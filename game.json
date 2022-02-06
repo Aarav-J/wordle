@@ -1,0 +1,50 @@
+{
+    "games": [
+        {
+            "game": 1,
+            "tries": 3,
+            "guesses": [
+                "roate",
+                "trock",
+                "frock"
+            ],
+            "word": "frock",
+            "solved": true
+        },
+        {
+            "game": 2,
+            "tries": 2,
+            "guesses": [
+                "label",
+                "lapel"
+            ],
+            "word": "lapel",
+            "solved": true
+        },
+        {
+            "game": 8,
+            "tries": 6,
+            "guesses": [
+                "roate",
+                "moist",
+                "light",
+                "skill",
+                "aloft",
+                "adept"
+            ],
+            "word": "ideal",
+            "solved": false
+        },
+        {
+            "game": 11,
+            "tries": 2,
+            "guesses": [
+                "happy",
+                "fauna"
+            ],
+            "word": "fauna",
+            "solved": true
+        }
+    ],
+    "games-played": 11
+}

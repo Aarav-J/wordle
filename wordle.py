@@ -1,9 +1,12 @@
 from termcolor import colored
 import string 
 import functions
+import json
 
-
-
+#[{'#': tries[], guesses[], time}]
+with open('game.json', 'r+') as f: 
+    data = json.load(f)
+    f.close()
 
 def wordIn(word, target):
     color = {}
@@ -40,7 +43,12 @@ for i in range(len(alphabetL)):
     alphabet.update({alphabetL[i]: 'white'})
 loops = 0
 #starting the game loop
+guesses = []
 while(flag): 
+    game = data['games-played'] + 1
+    
+    data['games-played'] +=1
+    
     print("try: " + str(loops))
     word = input("choice: ")
     code = functions.check_valid_word(word)
@@ -52,6 +60,7 @@ while(flag):
         continue
     else: 
         pass
+    guesses.append(word)
     #Getting the boardstate
     colors = wordIn(word, target)
     
@@ -68,12 +77,19 @@ while(flag):
       
         print(colored(word[i], color), end ='')
 
-        
+    print(guesses) 
     print()
-    if(i == 5):
+    if(loops == 5):
         flag = False
     loops+=1
 
+
+data["games"].append({'game': game, 'tries': loops, 'guesses': guesses, 'word': target, 'solved': win})
+
+
+with open('game.json', 'w') as f: 
+    json.dump(data, f, indent=4)
+    f.close()
 if win == True:
     print("you won in " + str(loops) + " tries.")
 else: 

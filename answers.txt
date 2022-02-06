@@ -1,3 +1,4 @@
+aback
 abase
 abate
 abbey
@@ -1627,7 +1628,7 @@ ruler
 rumba
 rumor
 rupee
-rural
+rural"shav
 rusty
 sadly
 safer
@@ -1711,7 +1712,6 @@ shard
 share
 shark
 sharp
-shave
 shawl
 shear
 sheen
@@ -2312,4 +2312,3 @@ youth
 zebra
 zesty
 zonal
-
